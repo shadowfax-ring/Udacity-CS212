@@ -28,6 +28,8 @@
 # written, this code will not RUN. Clicking SUBMIT will 
 # tell you if you are correct.
 
+hand_names = ['high card', 'one pair', 'two pairs', 'three of a kind', 'straight', 'flush', 'full house', 'four of a kind', 'straight flush']
+
 def poker(hands):
 	"Return a list of best hands: poker([hand,...]) => hand"
 	return allmax(hands, key=hand_rank)
@@ -91,7 +93,7 @@ def two_pair(ranks):
 	"""If there are two pair, return the two ranks as a
 	tuple: (highest, lowest); otherwise return None."""
 	pair = kind(2, ranks)
-	lopair = kind(2, list(reverse(ranks)))
+	lopair = kind(2, list(reversed(ranks)))
 	if pair and pair != lopair:
 	    return (pair, lopair)
 	else:
@@ -129,4 +131,4 @@ def test():
 
 	return 'tests pass'
 
-print test()
+#print test()

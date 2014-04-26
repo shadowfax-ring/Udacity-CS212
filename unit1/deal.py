@@ -19,6 +19,6 @@ def deal(numhands, n=5, deck=mydeck):
 	return [deck[n*i:n*(i+1)] for i in range(numhands)]
     
 #print mydeck
-print deal(2)
-print deal(5)
-print deal(9)
+#print deal(2)
+#print deal(5)
+#print deal(9)
